@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "alarmarobo-ae340": {
+      "hosting": {
+        "app": [
+          "alarmarobo-ae340"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "alarmarobo-ae340"
+  }
+}

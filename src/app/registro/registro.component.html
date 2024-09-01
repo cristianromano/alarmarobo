@@ -1,0 +1,34 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <h2 class="active">Registro</h2>
+
+    <div class="fadeIn first">
+      <img src="/assets/alarma.png" id="icon" alt="User Icon" />
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="registro()">
+      <input
+        type="text"
+        id="login"
+        class="fadeIn second"
+        formControlName="email"
+      />
+      <input
+        type="password"
+        id="password"
+        class="fadeIn third"
+        formControlName="password"
+      />
+      <input type="submit" class="fadeIn fourth" value="Registrarse" />
+    </form>
+
+    <div id="formFooter">
+      <a
+        class="underlineHover"
+        [routerLink]="['/login']"
+        routerLinkActive="active"
+        >Voler a login</a
+      >
+    </div>
+  </div>
+</div>

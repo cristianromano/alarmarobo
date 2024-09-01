@@ -1,0 +1,7 @@
+<ion-app>
+  <div *ngIf="splashScreenService.isVisible$ | async">
+    <app-splashscreen></app-splashscreen>
+  </div>
+
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>

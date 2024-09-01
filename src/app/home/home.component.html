@@ -1,0 +1,35 @@
+<div class="full-background">
+  <button
+    type="button"
+    class="btn btn-success btn-fullscreen"
+    [ngClass]="{
+      'btn-alarma-activa': apagarAlarma === false,
+      'btn-alarma-desactivada': apagarAlarma === true
+    }"
+    (click)="iniciarAlarma()"
+  >
+    {{ labelAlarma }}
+  </button>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button [disabled]="apagarAlarma" (click)="desactivarAlarma()">
+        <ion-icon name="stop-circle-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="globe" (click)="cerrarSesion()"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <div *ngIf="loginDesactivar" class="login-container">
+    <div class="login-box">
+      <h2>Desactivar Alarma</h2>
+      <input type="password" placeholder="Contraseña" [(ngModel)]="password" />
+      <button (click)="ingresoPassword()">Ingresar password</button>
+    </div>
+  </div>
+</div>

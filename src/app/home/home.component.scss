@@ -1,0 +1,101 @@
+.full-background {
+  width: 100vw;
+  height: 100vh;
+}
+
+:host {
+  background-color: rgb(61, 175, 77); /* Replace with your desired color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.position-absolute {
+  width: 100%;
+}
+
+.btn-fullscreen {
+  width: 100%;
+  height: 100%;
+  font-size: 2em; /* Tamaño del texto del botón */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.login-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  color: #050607;
+}
+
+.login-box input {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: calc(100% - 20px);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-box button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+  /* Adjustments for tablets and below */
+  .full-background form {
+    width: 90%; /* Makes the form take up most of the screen */
+    margin: 0 auto; /* Centers the form horizontally */
+  }
+
+  .position-relative {
+    position: static; /* Override Bootstrap positioning if necessary */
+  }
+
+  .d-flex {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+  }
+
+  .btn {
+    width: 100%; /* Full width buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjustments for small devices */
+  .full-background form {
+    width: 95%; /* Even more width for very small devices */
+  }
+}
+
+.btn-alarma-activa {
+  background-color: red;
+}
+
+.btn-alarma-desactivada {
+  background-color: green;
+}

@@ -1,0 +1,61 @@
+<div class="wrapper fadeInDown">
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="person-outline" (click)="loginRapidoUno()"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="person-outline" (click)="loginRapidoDos()"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="person-outline" (click)="loginRapidoTres()"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active">Ingresar</h2>
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="/assets/alarma.png" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="form" (ngSubmit)="login()">
+      <input
+        type="text"
+        id="login"
+        class="fadeIn second"
+        name="login"
+        formControlName="email"
+        placeholder="Ingrese correo electrónico"
+        style="font-size: 15px"
+      />
+      <input
+        type="password"
+        id="password"
+        class="fadeIn third"
+        name="login"
+        formControlName="password"
+        placeholder="Ingrese contraseña"
+      />
+      <input
+        type="submit"
+        class="fadeIn fourth"
+        value="Ingresar"
+        (click)="login()"
+      />
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" (click)="irRegistro()"
+        >Apreté para registrarse</a
+      >
+    </div>
+  </div>
+</div>
